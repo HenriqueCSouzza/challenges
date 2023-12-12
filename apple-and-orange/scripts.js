@@ -33,9 +33,18 @@ function readLine() {
  */
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
-  // Write your code here
-}
+  // Count the number of apples that fall on the house
+  const applesOnHouse = apples.filter(
+    (apple) => a + apple >= s && a + apple <= t
+  ).length;
 
+  // Count the number of oranges that fall on the house
+  const orangesOnHouse = oranges.filter(
+    (orange) => b + orange >= s && b + orange <= t
+  ).length;
+  console.log(applesOnHouse);
+  console.log(orangesOnHouse);
+}
 function main() {
   const firstMultipleInput = readLine().replace(/\s+$/g, "").split(" ");
 
